@@ -1,27 +1,12 @@
 const heroH1 = document.getElementById('heroH1');
-
 const introWords = ["Welcome to anonymeta", "Leave No Trace"];
 
-function siteIntroduction() {
-    let delay = 0;
-
-    for (let i = 0; i < introWords.length; i++) {
-        let currentWord = introWords[i];
-
-        for (let j = 0; j < currentWord.length; j++) {
-            setTimeout(() => {
-                heroH1.innerHTML += currentWord.charAt(j);
-            }, delay);
-
-            delay += 100;
+function typeWrite(words, typeSpeed) {
+    for (let i = 0; i < words.length; i++) {
+        for (let j = 0; j <= words[i].length; j++) {
+            
         }
-
-        delay += 1000;
-
-        setTimeout(() => {
-            heroH1.innerHTML = " ";
-        }, delay);
     }
 }
 
-siteIntroduction();
+typeWrite(introWords, 100);
